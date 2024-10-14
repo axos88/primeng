@@ -1,4 +1,4 @@
-import { Type } from '@angular/core';
+import { EnvironmentInjector, Type } from '@angular/core';
 
 /**
  * Dialogs can be created dynamically with any component as the content using a DialogService.
@@ -185,6 +185,8 @@ export class DynamicDialogConfig<T = any> {
      * @group Props
      */
     templates?: DynamicDialogTemplates;
+
+    environmentInjector?: EnvironmentInjector;
 }
 
 /**

@@ -341,7 +341,7 @@ export class DynamicDialogComponent implements AfterViewInit, OnDestroy {
         let viewContainerRef = this.insertionPoint?.viewContainerRef;
         viewContainerRef?.clear();
 
-        this.componentRef = viewContainerRef?.createComponent(componentType);
+        this.componentRef = viewContainerRef?.createComponent(componentType, { environmentInjector: this.config.environmentInjector });
         this.dialogRef.onChildComponentLoaded.next(this.componentRef!.instance);
     }
 
